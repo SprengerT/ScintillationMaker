@@ -1,20 +1,5 @@
 import numpy as np
-from numpy import newaxis as na
-import matplotlib as mpl
-#mpl.use('TkAgg')
-import matplotlib.style as mplstyle
-mplstyle.use('fast')
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 import os
-import sys
-import scipy
-from astropy.time import Time
-from astropy.coordinates import solar_system_ephemeris, get_body_barycentric, get_body, get_body_barycentric_posvel, SkyCoord, EarthLocation, Angle
-from astropy import units as u
-from astropy.visualization import make_lupton_rgb
-import progressbar
-from scipy.optimize import curve_fit,minimize
 
 from numpy.ctypeslib import ndpointer
 import ctypes
@@ -50,11 +35,9 @@ def simulate_scintillation(t,nu,t_s,nu_s,N_im=1000,th_lim=3.):
     N_t = len(t)
     N_nu = len(nu)
     nu0 = np.mean(nu)
-    print(nu0)
     
     t_scaled = -nu_s*t/(2.*nu0*t_s)
     nu_scaled = nu/nu_s
-    print(t_scaled[-1]-t_scaled[0])
     
     E_real = np.zeros(N_t*N_nu,dtype=float)
     E_im = np.zeros(N_t*N_nu,dtype=float)
