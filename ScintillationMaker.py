@@ -17,7 +17,7 @@ hour = 3600.
 day = 24.*hour
 
 #user input
-N_t = 2000
+N_t = 1
 N_nu = 2000
 bandwidth = 250.*MHz
 nu0 = 1360.*MHz
