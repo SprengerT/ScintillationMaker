@@ -38,6 +38,19 @@ E = simulate_scintillation(t,nu,t_s,nu_s,N_im=1000,th_lim=3.)
 I = np.abs(E)**2
 I = I/np.mean(I)
 
+######## Introducing noise in the scintillating field 
+#The noise is created as complex random values with zero mean  
+
+rng = np.random.default_rng(12345)
+Erms  = float(np.sqrt(np.mean(np.abs(E)**2)))
+sigma = (0.2 * Erms) / np.sqrt(2.0)  # NOISE_FRAC = 0.6
+
+noise_on  = sigma * (rng.standard_normal(E.shape) + 1j * rng.standard_normal(E.shape))
+noise_off = sigma * (rng.standard_normal(E.shape) + 1j * rng.standard_normal(E.shape))
+
+I_on  = np.abs(E + noise_on)**2
+I_off = np.abs(noise_off)**2
+
 ##################
 #### The following are diagnostics and can be removed ####
 
