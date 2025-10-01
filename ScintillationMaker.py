@@ -22,8 +22,8 @@ N_nu = 2000
 bandwidth = 250.*MHz
 nu0 = 1360.*MHz
 duration = 120.*minute
-nu_s = 1.*MHz
-t_s = 1.*minute
+nu_s = 10.*MHz
+t_s = 10.*minute
 
 #derived quantities
 nu = np.linspace(0.,bandwidth,num=N_nu)
