@@ -33,7 +33,7 @@ ${\tilde{t} = {{t}/{t_{s}}}}$
 
 We choose a coordinate system where the image position $\tilde{\theta}$ is separated into a part parallel to the effective velocity and a part perpendicular to it. Then we obtain the geometric phase in observational parameters:
 
-$\Phi = \tilde{\nu}\left{\left( \tilde{\theta}_\parallel - \frac{\nu_s}{2\nu_0}\tilde{t} \right)^2 + \tilde{\theta}_\perp^2 \right}$
+${\Phi = \tilde{\nu}\left{\left( \tilde{\theta}_\shortparallel - \frac{\nu_s}{2\nu_0}\tilde{t} \right)^2 + \tilde{\theta}_\perp^2 \right}}$
 
 The minus sign here is not following directly from this transformation. However, we can define the coordinate systems of $\vec{\theta}$ and $\vec{V}_\text{eff}$ such that the sign is correct, which is the usual choice of coordinates.
 
