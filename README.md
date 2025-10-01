@@ -41,4 +41,4 @@ The obtained formula can be used to simulate scintillation with desired scales w
 
 ## Practical implementation
 
-Images are drawn from a uniform random distribution over $\tilde{\theta}\_{\shortparallel}$ and $\tilde{\theta}_{\perp}$ where both range from -3 to 3. The number of images can be set (the default is 1000). The square window on a theoretically infinite screen is an approximation done to save computation time. The range can be increased beyond the default of 3.
+Images are drawn from a uniform random distribution over $\tilde{\theta}\_{\shortparallel}$ and $\tilde{\theta}_{\perp}$ where both range from -3 to 3 by default. The number of images can be set (the default is 1000). The square window on a theoretically infinite screen is an approximation done to save computation time. The range can be increased beyond the default of 3.
