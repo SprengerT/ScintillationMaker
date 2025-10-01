@@ -43,7 +43,8 @@ I = I/np.mean(I)
 
 rng = np.random.default_rng(12345)
 Erms  = float(np.sqrt(np.mean(np.abs(E)**2)))
-sigma = (0.2 * Erms) / np.sqrt(2.0)  # NOISE_FRAC = 0.6
+noise_frac = 0.6 / np.sqrt(2.0) # NOISE_FRAC = 0.6
+sigma = noise_frac * Erms)  
 
 noise_on  = sigma * (rng.standard_normal(E.shape) + 1j * rng.standard_normal(E.shape))
 noise_off = sigma * (rng.standard_normal(E.shape) + 1j * rng.standard_normal(E.shape))
