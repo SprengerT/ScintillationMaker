@@ -29,7 +29,7 @@ $\tilde{\theta} = \theta/\theta_s$
 
 $\tilde{\nu} = \nu/\nu_s$
 
-$\tilde{t} = t/t_s$
+\(\tilde{t} = t/t_{s}$\)
 
 We choose a coordinate system where the image position $\tilde{\theta}$ is separated into a part parallel to the effective velocity and a part perpendicular to it. Then we obtain the geometric phase in observational parameters:
 
