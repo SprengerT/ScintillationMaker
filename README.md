@@ -8,7 +8,7 @@ $E(t,\nu) \propto \sum_n \mu_n \exp\left( i \phi_n + i \Phi_n(t,\nu) \right) $
 
 where $\mu$ is the amplitude of each image and $\Phi$ is its geometrical phase due to the length of its scattered path. Using canonical notations, the geometrical phase is given by
 
-$\Phi = \pi\frac{\nu}{c}D_\text{eff}\left( \vec{\theta}_n - \frac{\vec{V}_\text{eff}}{D_\text{eff}}t \right)^2$
+$\Phi = \pi\frac{\nu}{c}D_\text{eff}\left( \vec{\theta}\_n - \frac{\vec{V}\_\text{eff}}{D_\text{eff}}t \right)^2$
 
 We now assume that the images' amplitudes are distributed like a Gaussian that is constant over frequency, which yields the often observed Lorentzian spectral ACF (although in reality there is a rather strong spectral evolution of the width of the scattering disk!):
 
