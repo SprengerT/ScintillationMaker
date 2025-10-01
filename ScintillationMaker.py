@@ -31,8 +31,9 @@ nu = nu-np.mean(nu)+nu0
 t = np.linspace(0.,duration,num=N_t)
 t = t-np.mean(t)
 
-# The higher N_im, the closer the output gets to the ensemble average, but at computational cost
-E = simulate_scintillation(t,nu,t_s,nu_s,N_im=1000)
+# The higher N_im, the closer the output gets to the ensemble average, but at computational cost.
+# Higher values of th_lim reduce the truncation of the scattering disk, but N_im needs to increase quadratically with it to maintain the same level of accuracy.
+E = simulate_scintillation(t,nu,t_s,nu_s,N_im=1000,th_lim=3.)
 
 I = np.abs(E)**2
 I = I/np.mean(I)
