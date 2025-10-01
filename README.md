@@ -26,9 +26,7 @@ where $\nu_0$ is the central frequency.
 In contrast to the effective distance, effective velocity, and the charcteristic scattering angle, these scales are directly accessible to the observer and fully define the observed scintillation in this model. Thus, we absorb physical constants into our variables:
 
 $\tilde{\theta} = \theta/\theta_s$
-
 $\tilde{\nu} = \nu/\nu_s$
-
 $\tilde{t} = t/t_{s}$
 
 We choose a coordinate system where the image position $\tilde{\theta}$ is separated into a part parallel to the effective velocity and a part perpendicular to it. Then we obtain the geometric phase in observational parameters:
