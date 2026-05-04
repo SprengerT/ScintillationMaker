@@ -36,15 +36,45 @@ def simulate_scintillation(t,nu,t_s,nu_s,N_im=1000,th_lim=3.):
     ph = 2.*np.pi*rng.random(N_im)
     
     N_t = len(t)
+    t0 = np.mean(t)
     N_nu = len(nu)
     nu0 = np.mean(nu)
     
-    t_scaled = -nu_s*t/(2.*nu0*t_s)
-    nu_scaled = nu/nu_s
+    t_scaled = -(t-t0)/t_s
+    nu_scaled = (nu-nu0)/nu_s
     
     E_real = np.zeros(N_t*N_nu,dtype=float)
     E_im = np.zeros(N_t*N_nu,dtype=float)
     lib.simulate_SimpleScreen(E_real,E_im,N_t,N_nu,N_im,nu_scaled,t_scaled,thx,thy,mu,ph)
     E = E_real.reshape((N_t,N_nu))+1.0j*E_im.reshape((N_t,N_nu))
+    
+    return E
+
+def simulate_singleburst_spectrum(nu,nu_s,N_im=1000,th_lim=3.):
+    rng = np.random.default_rng()
+    
+    angles = rng.uniform(0.,2.*np.pi,N_im)
+    radii = th_lim*np.sqrt(rng.random(N_im))
+    
+    thx = radii*np.cos(angles)
+    thy = radii*np.sin(angles)
+    mu = np.exp(-0.5*(thx**2+thy**2))
+    ph = 2.*np.pi*rng.random(N_im)
+    
+    t = np.array([0.])
+    t_s = 1.
+    
+    N_t = len(t)
+    t0 = np.mean(t)
+    N_nu = len(nu)
+    nu0 = np.mean(nu)
+    
+    t_scaled = -(t-t0)/t_s
+    nu_scaled = (nu-nu0)/nu_s
+    
+    E_real = np.zeros(N_nu,dtype=float)
+    E_im = np.zeros(N_nu,dtype=float)
+    lib.simulate_SimpleScreen(E_real,E_im,N_t,N_nu,N_im,nu_scaled,t_scaled,thx,thy,mu,ph)
+    E = E_real+1.0j*E_im
     
     return E
