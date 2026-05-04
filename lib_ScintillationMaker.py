@@ -27,8 +27,11 @@ lib.simulate_SimpleScreen.argtypes = [
 def simulate_scintillation(t,nu,t_s,nu_s,N_im=1000,th_lim=3.):
     rng = np.random.default_rng()
     
-    thx = rng.uniform(-th_lim,th_lim,N_im)
-    thy = rng.uniform(-th_lim,th_lim,N_im)
+    angles = rng.uniform(0.,2.*np.pi,N_im)
+    radii = th_lim*np.sqrt(rng.random(N_im))
+    
+    thx = radii*np.cos(angles)
+    thy = radii*np.sin(angles)
     mu = np.exp(-0.5*(thx**2+thy**2))
     ph = 2.*np.pi*rng.random(N_im)
     
