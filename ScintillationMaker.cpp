@@ -26,7 +26,7 @@ void  simulate_SimpleScreen (double *E_real, double *E_im, int N_t, int N_nu, in
             const double v_t = t[i_t];
             #pragma omp simd reduction(+:realsum,imagsum)
 			for (int i_th = 0; i_th < N_th; i_th++){
-                Phase = ph[i_th] + v_nu*(thy[i_th]*thy[i_th] + thy[i_th]*thy[i_th]) + v_t*thx[i_th];
+                Phase = ph[i_th] + v_nu*(thx[i_th]*thx[i_th] + thy[i_th]*thy[i_th]) + v_t*thx[i_th];
                 const double v_mu = mu[i_th];
 				realsum += v_mu*cos(Phase);
 				imagsum += v_mu*sin(Phase);
