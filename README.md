@@ -8,7 +8,7 @@ ${E(t,\nu) \propto \sum_n \mu_n \exp\left( i \phi_n + i \Phi_n(t,\nu) \right) }$
 
 where $\mu$ is the amplitude of each image and $\Phi$ is its geometrical phase due to the length of its scattered path. Using canonical notations, the geometrical phase is given by
 
-${\Phi = \pi\frac{\nu}{c}D_\text{eff}\left( \vec{\theta}\_n - \frac{\vec{V}\_\text{eff}}{D_\text{eff}}t \right)^2}$
+${\Phi_n = \pi\frac{\nu}{c}D_\text{eff}\left( \vec{\theta}\_n - \frac{\vec{V}\_\text{eff}}{D_\text{eff}}t \right)^2}$
 
 We now assume that the images' amplitudes are distributed like a Gaussian that is constant over frequency, which yields the often observed Lorentzian spectral ACF (although in reality there is a rather strong spectral evolution of the width of the scattering disk!):
 
@@ -31,9 +31,9 @@ ${\tilde{\nu} = \frac{\nu-\nu_0}{\nu_s}}$
 
 ${\tilde{t} = \frac{t-t_0}{t_{s}}}$
 
-We choose a coordinate system where the image position $\tilde{\theta}$ is separated into a part parallel to the effective velocity and a part perpendicular to it. Then we obtain the geometric phase in observational parameters:
+We choose a coordinate system where the image position $\tilde{\theta}$ is separated into a part parallel to the effective velocity -- pointing in positive direction of the velocity -- and a part perpendicular to it. Then we obtain the geometric phase in observational parameters:
 
-$\Phi = \tilde{\nu}\left\[\left( {\tilde{\theta}}\_{\shortparallel} - \frac{{\nu}\_{s}}{2\nu_0}\tilde{t} \right)^2 + \tilde{\theta}_{\perp}^2 \right\]$
+$\Phi_n = \tilde{\nu}\left( {\tilde{\theta}}\_{\shortparallel,n}^2 + \tilde{\theta}_{\perp,n}^2 \right) - \tilde{t} {\tilde{\theta}}\_{\shortparallel,n} + {\cal O}\left(\frac{\nu_s}{\nu_0}\right) + \text{const.}$
 
 The minus sign here is not following directly from this transformation. However, we can define the coordinate systems of $\vec{\theta}$ and $\vec{V}_\text{eff}$ such that the sign is correct, which is the usual choice of coordinates.
 
