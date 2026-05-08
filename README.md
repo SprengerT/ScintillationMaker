@@ -33,9 +33,9 @@ ${\tilde{t} = \frac{t-t_0}{t_{s}}}$
 
 We choose a coordinate system where the image position $\tilde{\theta}$ is separated into a part parallel to the effective velocity -- pointing in positive direction of the velocity -- and a part perpendicular to it. Then we obtain the geometric phase in observational parameters:
 
-$\Phi_n = \left(\tilde{\nu}+\frac{\nu_0}{\nu_s}\right)\times\left( {\tilde{\theta}}\_{\shortparallel,n}^2 + \tilde{\theta}_{\perp,n}^2 \right) - \tilde{t} {\tilde{\theta}}\_{\shortparallel,n} + {\cal O}\left(\frac{\nu_s}{\nu_0}\right) + \text{const.}$
+$\Phi_n = \tilde{\nu}\times\left( {\tilde{\theta}}\_{\shortparallel,n}^2 + \tilde{\theta}_{\perp,n}^2 \right) - \tilde{t} {\tilde{\theta}}\_{\shortparallel,n} + {\cal O}\left(\frac{\nu_s}{\nu_0}\right) + \text{const.}$
 
-We ignore terms containing ${\nu_s/\nu_0}$ because we are not interested in spectral evolution here. As a result, the input scintillation bandwidth is correct at all frequencies rather than in a narrow region around the input central frequency. Terms that do not contain $\tilde{\theta}$ only contribute to the phase which is lost when forming the intensity. 
+We ignore terms containing ${\nu_s/\nu_0}$ because we are not interested in spectral evolution here. As a result, the input scintillation bandwidth is correct at all frequencies rather than in a narrow region around the input central frequency. Terms that do not contain $\tilde{\theta}$ only contribute to the phase which is lost when forming the intensity. Terms that do not contain $\tilde{t}$ and $\tilde{\nu}$ contribute but cannot be distuingished from the random phase $\phi_n$. Thus, they can too be ignored by absorbing them into this term, which leaves us with a very simple formula.
 
 The obtained formula can be used to simulate scintillation with desired scales without specifying any physical distances or velocities.
 
