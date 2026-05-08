@@ -33,12 +33,12 @@ ${\tilde{t} = \frac{t-t_0}{t_{s}}}$
 
 We choose a coordinate system where the image position $\tilde{\theta}$ is separated into a part parallel to the effective velocity -- pointing in positive direction of the velocity -- and a part perpendicular to it. Then we obtain the geometric phase in observational parameters:
 
-$\Phi_n = \tilde{\nu}\left( {\tilde{\theta}}\_{\shortparallel,n}^2 + \tilde{\theta}_{\perp,n}^2 \right) - \tilde{t} {\tilde{\theta}}\_{\shortparallel,n} + {\cal O}\left(\frac{\nu_s}{\nu_0}\right) + \text{const.}$
+$\Phi_n = \left(\tilde{\nu}+\frac{\nu_0}{\nu_s}\right)\times\left( {\tilde{\theta}}\_{\shortparallel,n}^2 + \tilde{\theta}_{\perp,n}^2 \right) - \tilde{t} {\tilde{\theta}}\_{\shortparallel,n} + {\cal O}\left(\frac{\nu_s}{\nu_0}\right) + \text{const.}$
 
-The minus sign here is not following directly from this transformation. However, we can define the coordinate systems of $\vec{\theta}$ and $\vec{V}_\text{eff}$ such that the sign is correct, which is the usual choice of coordinates.
+We ignore terms containing ${\nu_s/\nu_0}$ because we are not interested in spectral evolution here. As a result, the input scintillation bandwidth is correct at all frequencies rather than in a narrow region around the input central frequency. Terms that do not contain $\tilde{\theta}$ only contribute to the phase which is lost when forming the intensity. 
 
-The obtained formula can be used to simulate scintillation with desired scales without specifying any  physical distances or velocities.
+The obtained formula can be used to simulate scintillation with desired scales without specifying any physical distances or velocities.
 
 ## Practical implementation
 
-Images are drawn from a uniform random distribution over $\tilde{\theta}\_{\shortparallel}$ and $\tilde{\theta}_{\perp}$ where both range over a circle of radius 3 around the origin by default. The number of images can be set (the default is 1000). The square window on a theoretically infinite screen is an approximation done to save computation time. The range can be increased beyond the default of 3. All proportionality relations are replaced by equations. The overall magnification of the source is not known and the result needs a normalisation specified by the user.
+Images are drawn from a uniform random distribution over $\tilde{\theta}\_{\shortparallel}$ and $\tilde{\theta}_{\perp}$ where both range over a circle of radius 3 around the origin by default. The number of images can be set (the default is 1000). The circular window on a theoretically infinite screen is an approximation done to save computation time. The range can be increased beyond the default of 3. All proportionality relations are replaced by equations. The overall magnification of the source is not known and the result needs a normalisation specified by the user.
