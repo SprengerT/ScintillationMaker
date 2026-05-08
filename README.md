@@ -23,13 +23,13 @@ $t_s = \frac{c}{2\pi\nu_0\vert \vec{V}_\text{eff} \vert \theta_s}$
 
 where $\nu_0$ is the central frequency.
 
-In contrast to the effective distance, effective velocity, and the charcteristic scattering angle, these scales are directly accessible to the observer and fully define the observed scintillation in this model. Thus, we absorb physical constants into our variables:
+In contrast to the effective distance, effective velocity, and the characteristic scattering angle, these scales are directly accessible to the observer and fully define the observed scintillation in this model. Thus, we absorb physical constants into our variables. Furthermore, we also absorb the central time and central frequency because the first is an arbitrary choice and the second is only important relative to the full bandwidth and the scintillation bandwidth. The redefined variables are:
 
 $\tilde{\theta} = \theta/\theta_s$
 
-$\tilde{\nu} = \nu/\nu_s$
+$\tilde{\nu} = \frac{\nu-\nu_0}{\nu_s}$
 
-${\tilde{t} = {{t}/{t_{s}}}}$
+$\tilde{t} = \frac{t-t_0}{t_{s}}$
 
 We choose a coordinate system where the image position $\tilde{\theta}$ is separated into a part parallel to the effective velocity and a part perpendicular to it. Then we obtain the geometric phase in observational parameters:
 
